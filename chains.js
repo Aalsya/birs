@@ -5,17 +5,17 @@ constructor(bodyA,bodyB){
         bodyA:bodyA,
         bodyB:bodyB,
         stiffness:0.04,
-        langth:10
+        length:10
              }
-             var bay = Constraints.create(options);
-             World.add(world,bay);
+             this.chain = Constraints.create(options);
+             World.add(world,this.chain);
 
 }
 
 display(){
 
-var posA = this.bay.bodyA.position;
-var posB = this.bay.bodyB.position;
+var posA = this.chain.bodyA.position;
+var posB = this.chain.bodyB.position;
 
 line(posA.x,posA.y,posB.x,posB.y);
 
